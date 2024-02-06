@@ -60,7 +60,7 @@ export async function POST(req: Request) {
     const user = {
       clerkId: id,
       email: email_addresses[0].email_address,
-      username: username!,
+      username: username || Math.floor(Math.random() * 100).toString(),
       firstName: first_name,
       lastName: last_name,
       photo: image_url,
